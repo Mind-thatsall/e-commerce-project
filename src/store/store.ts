@@ -8,6 +8,7 @@ export interface Cart {
 export const useCart = create<Cart>(set => ({
   products: [],
   addToCart: (newItem) => {
+    console.log(newItem);
     set(state => {
       const updateCart = [...state.products, newItem];
       return {

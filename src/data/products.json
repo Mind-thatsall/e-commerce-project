@@ -23,6 +23,32 @@
       "name": "Best",
       "price": 29,
       "size": "XL"
+    },
+    {
+      "id": 5,
+      "name": "Test",
+      "price": 29,
+      "size": "XL"
+    }
+  ],
+  "cart": [
+    {
+      "id": 5,
+      "name": "Test",
+      "price": 29,
+      "size": "XL"
+    },
+    {
+      "id": 6,
+      "name": "Test",
+      "price": 29,
+      "size": "XL"
+    },
+    {
+      "id": 7,
+      "name": "Test",
+      "price": 29,
+      "size": "XL"
     }
   ]
 }

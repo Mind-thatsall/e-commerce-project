@@ -1,3 +1,4 @@
+import StoreInitializer from "@/components/StoreInitializer";
 import { useCart } from "@/store/store";
 
 export const metadata = {
@@ -10,13 +11,14 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const dataRes = await fetch("http://localhost:3001/products");
+  // Fetching cart data of user from server
+  const dataRes = await fetch("http://localhost:3001/cart");
   const data = await dataRes.json();
-
-  useCart.setState({ products: data });
 
   return (
     <html lang="en">
+      {/* Passing down the data from server to client so we can manage it using zustand */}
+      <StoreInitializer CartItems={data} />
       <body>{children}</body>
     </html>
   );

@@ -4,23 +4,28 @@ import { useCart } from "@/store/store";
 import axios from "axios";
 
 export const AddToCart = () => {
-  const { addToCart, products } = useCart();
+  const { addToCart } = useCart();
   const newItem = {
-    id: 4,
-    name: "Best",
+    id: 6,
+    name: "Test",
     price: 29,
     size: "XL",
   };
 
   async function handleAddToCart() {
-    try {
-      await axios.post("http://localhost:3001/products", newItem);
-      addToCart(newItem);
-      console.log(products);
-    } catch (error: any) {
-      throw Error(error.message);
-    }
+    axios
+      .post("http://localhost:3001/cart", newItem)
+      .then(() => {
+        addToCart(newItem);
+      })
+      .catch((e) => {
+        throw new Error(e.message);
+      });
   }
 
-  return <div onClick={handleAddToCart}>Add to cart</div>;
+  return (
+    <>
+      <div onClick={handleAddToCart}>add</div>
+    </>
+  );
 };
