@@ -1,12 +1,21 @@
+import { newItemToCart } from "@/types/types";
 import { create } from "zustand"
-
-interface Cart {
-  count: number;
-  addToCart: () => void;
+export interface Cart {
+  products: newItemToCart[];
+  addToCart?: (params: newItemToCart) => void;
 }
 
 export const useCart = create<Cart>(set => ({
-  count: 1,
-  addToCart: () => set(state => ({ count: state.count + 1 })),
+  products: [],
+  addToCart: (newItem) => {
+    set(state => {
+      const updateCart = [...state.products, newItem];
+      return {
+        ...state,
+        products: updateCart,
+      }
+    })
+
+  },
   })
 )

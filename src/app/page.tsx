@@ -1,8 +1,7 @@
 import { AddToCart } from "@/components/AddToCart";
 import { Navbar } from "@/components/Navbar";
-import { Test } from "@/components/Test";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
       <Navbar />
