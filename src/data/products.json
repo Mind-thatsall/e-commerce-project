@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Pants",
+      "price": 12,
+      "size": "S"
+    },
+    {
+      "id": 2,
+      "name": "Trousers",
+      "price": 10,
+      "size": "M"
+    }
+  ]
+}
