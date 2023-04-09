@@ -11,6 +11,18 @@
       "name": "Trousers",
       "price": 10,
       "size": "M"
+    },
+    {
+      "id": 3,
+      "name": "Vest",
+      "price": 29,
+      "size": "XL"
+    },
+    {
+      "id": 4,
+      "name": "Best",
+      "price": 29,
+      "size": "XL"
     }
   ]
 }
