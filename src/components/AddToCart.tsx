@@ -25,7 +25,9 @@ export const AddToCart = () => {
 
   return (
     <>
-      <div onClick={handleAddToCart}>add</div>
+      <div onClick={handleAddToCart} className="text-white">
+        Add to cart
+      </div>
     </>
   );
 };

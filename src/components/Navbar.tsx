@@ -5,7 +5,7 @@ export const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li>Home</li>
+        <li className="bg-black">Home</li>
         <li>SHOP</li>
         <li>TEST</li>
         <Cart />
